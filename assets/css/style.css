@@ -122,14 +122,19 @@ form {
         background-color: var(--branco);
         color: var(--preto);
         border: 2px solid var(--preto);
-        width: 120px;
-        font-size: 18px;
     }
 }
 
+footer {
+    background-color: var(--preto);
+    color: var(--branco);
+    text-align: center;
+}
 
-
-
+.logo_footer {
+    width: 150px;
+    height: auto;
+}
 
 
 
