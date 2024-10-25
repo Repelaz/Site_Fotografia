@@ -91,7 +91,7 @@
 
             <input type="tel" id="telefone" name="telefone" placeholder="Telefone">
 
-            <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Envie sua mensagem" 
+            <textarea id="texto" name="mensagem" rows="4" cols="50" placeholder="Envie sua mensagem" 
             required></textarea>
 
             <button id="enviar" type="button" >Enviar</button>
@@ -125,8 +125,10 @@
                 mensagem = "Preencha o campo email"
             } else if (telefone.value == "" || telefone.value == null) {
                 mensagem = "Preencha o campo telefone"
+            } else if (texto.value == ""){
+                mensagem = "Preencha o campo mensagem para enviar uma mensagem!"
             } else {
-                mensagem = "Sua mensagem foi enviada!"
+                mensagem = "Sua mensagem foi enviada com sucesso!"
             }
 
             resultado.textContent = mensagem
