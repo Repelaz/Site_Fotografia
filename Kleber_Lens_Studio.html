@@ -89,14 +89,16 @@
 
             <input type="email" id="email" name="email" placeholder="Email" required>
 
-            <input type="telefone" id="telefone" name="telefone" placeholder="Telefone">
+            <input type="tel" id="telefone" name="telefone" placeholder="Telefone">
 
             <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Envie sua mensagem" 
             required></textarea>
 
             <button id="enviar" type="button" >Enviar</button>
             
-            <div id="msg"></div>
+            <div id="msg">
+                <h3 class="" id="exibir-msg"></h3>
+            </div>
         </form>
     </section>
 
@@ -111,28 +113,28 @@
     <script>
 
         function enviou () {
-            var nome = document.querySelector('#nome')
-            var mensagem = document.querySelector('#msg')
-            var novo = document.createElement('h3')
+            var nome = document.querySelector('#nome');
+            var email = document.querySelector('#email');
+            var telefone = document.querySelector('#telefone');
+            var resultado = document.getElementById('exibir-msg');
+            var mensagem = ""
 
             if (nome.value == "" || nome.value == null) {
-                novo.textContent = "Preencha o campo nome"
+                mensagem = "Preencha o campo nome"
             } else if (email.value == "" || email.value == null) {
-                novo.textContent = "Preencha o campo email"
+                mensagem = "Preencha o campo email"
             } else if (telefone.value == "" || telefone.value == null) {
-                novo.textContent = "Preencha o campo telefone"
+                mensagem = "Preencha o campo telefone"
             } else {
-                novo.textContent = "Sua mensagem foi enviada!"
+                mensagem = "Sua mensagem foi enviada!"
             }
 
-            mensagem.appendChild(novo)
+            resultado.textContent = mensagem
         }
 
-
-
-        var botao = document.querySelector('#enviar')
-        botao.addEventListener('click', enviou)
-
+        var botao = document.querySelector('#enviar');
+        botao.addEventListener('click', enviou);
+        
     </script>
 
 </body>
