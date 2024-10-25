@@ -92,11 +92,11 @@
 
             <input type="tel" id="telefone" name="telefone" placeholder="Telefone">
 
-            <textarea id="texto" name="mensagem" rows="4" cols="50" placeholder="Envie sua mensagem" 
-            required></textarea>
+            <textarea id="texto" name="mensagem" rows="4" cols="50" placeholder="Envie sua mensagem"
+                required></textarea>
 
-            <button id="enviar" type="button" >Enviar</button>
-            
+            <button id="enviar" type="button">Enviar</button>
+
             <div id="msg">
                 <h3 class="" id="exibir-msg"></h3>
             </div>
@@ -113,7 +113,7 @@
 
     <script>
 
-        function enviou () {
+        function enviou() {
             var nome = document.querySelector('#nome');
             var email = document.querySelector('#email');
             var telefone = document.querySelector('#telefone');
@@ -126,7 +126,7 @@
                 mensagem = "Preencha o campo email"
             } else if (telefone.value == "" || telefone.value == null) {
                 mensagem = "Preencha o campo telefone"
-            } else if (texto.value == ""){
+            } else if (texto.value == "") {
                 mensagem = "Preencha o campo mensagem para enviar uma mensagem!"
             } else {
                 mensagem = "Sua mensagem foi enviada com sucesso!"
@@ -137,7 +137,7 @@
 
         var botao = document.querySelector('#enviar');
         botao.addEventListener('click', enviou);
-        
+
     </script>
 
 </body>
