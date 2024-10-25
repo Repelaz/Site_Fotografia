@@ -50,8 +50,10 @@ header {
 
 .fotos {
     width: 100%;
+    height: auto;
     position: relative;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 3vh;
 }
 
 .foto {
@@ -141,43 +143,36 @@ footer {
     padding: 3vh;
 }
 
+@media (max-width: 1150px) {
+    .foto {
+        width: 30vh;
+        height: 40vh;
+    }
+}
 
+@media (max-width: 880px) {
+    .foto {
+        width: 25vh;
+        height: 35vh;
+    }
+}
 
+@media (max-width: 800px) {
+    .caixa-texto {
+        width: 100vh;
+        height: auto;
+    }
 
+    .foto {
+        width: 35vh;
+        height: auto;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 760px) {
+    .foto {
+        display: block;
+        width: 50vh;
+        height: 30vh;
+    }
+}
